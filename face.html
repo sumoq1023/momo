@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      <!--字符类型-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人脸融合与图片展示</title>              <!--项目的标题，只出现在浏览时显示-->
+    <link rel="stylesheet" href="face.css">          <!--连接css文件-->
+</head>
+<body>
+
+    <header>
+        <h1>人脸融合与图片展示</h1>      <!--页首-->
+    </header>
+
+    <main>            <!--主要内容-->
+        <!-- 图片上传 -->
+        <section id="uploadSection">    <!--不同处理器类型，id是最高位权，css修饰时#id，而也可以用Class分类，css修饰时.class-->
+            <h2>上传图片</h2>     <!--二级标题-->
+            <input type="file" id="imageUpload" accept="image/*"><!--接收文件类型，jpg，png等格式的文件-->
+            <button id="detectFaceButton">检测人脸</button><!--按钮button，需要对接相应行为-->
+            <div id="detectionResult"></div><!--空的独占一行便于js根据id进行补充内容-->
+        </section>
+
+        <!-- 轮播图 -->
+        <section id="carousel">
+            <h2>轮播图</h2>
+            <div class="carousel-container">
+                <div class="carousel-item active">
+                    <!--图片路径上传-->
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\M1.png" alt="人脸一号">
+                </div>
+                <div class="carousel-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\M2.png" alt="人脸二号">
+                </div>
+                <div class="carousel-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\M6.png" alt="人脸三号">
+                </div>
+            </div>
+            <!--carousel-control是通用类，prev是特定类-->
+            <button class="carousel-control prev" onclick="prevSlide()">《</button><!--轮播图响应左右箭头设置-->
+            <button class="carousel-control next" onclick="nextSlide()">》</button>
+        </section>
+
+        <!-- 瀑布流 -->
+        <section id="waterfall">
+            <h2>瀑布流</h2>
+            <div class="waterfall-container">
+                <!--类选择器，可以应用于多个HTML元素-->
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\a3.png" alt="人脸一号">
+                </div>
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\a4.png" alt="人脸二号">
+                </div>
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\M4.png" alt="人脸三号">
+                </div>
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\g1.jpg" alt="人脸四号">
+                </div>
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\g2.jpg" alt="人脸五号">
+                </div>
+                <div class="waterfall-item">
+                    <img src="C:\Users\sumoq\Desktop\htmlcss\tu\M5.png" alt="人脸五号">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><!--页尾-->
+        <p>人脸检测与图片展示</p>
+    </footer>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js "></script><!--ajax连接所需cdn-->
+    <script src="face.js"></script><!--连接js操作-->
+</body>
+</html>
